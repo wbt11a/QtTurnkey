@@ -1,0 +1,2469 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1038</width>
+    <height>285</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>QtTurnKey Install Assistant</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="QFrame" name="frame">
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <layout class="QGridLayout" name="gridLayout">
+       <item row="2" column="0">
+        <widget class="QLineEdit" name="lineEdit_2"/>
+       </item>
+       <item row="0" column="3">
+        <widget class="QLabel" name="label">
+         <property name="text">
+          <string>Turnkey Application</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="4">
+        <widget class="QLabel" name="label_2">
+         <property name="text">
+          <string>Virtualization Type</string>
+         </property>
+        </widget>
+       </item>
+       <item row="6" column="0">
+        <widget class="QCommandLinkButton" name="commandLinkButton_2">
+         <property name="font">
+          <font>
+           <family>DejaVu Sans</family>
+           <pointsize>10</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string>Save</string>
+         </property>
+        </widget>
+       </item>
+       <item row="6" column="5">
+        <widget class="QCommandLinkButton" name="commandLinkButton">
+         <property name="font">
+          <font>
+           <family>DejaVu Sans</family>
+           <pointsize>10</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string>Install</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="0">
+        <widget class="QLineEdit" name="lineEdit_4"/>
+       </item>
+       <item row="0" column="0">
+        <widget class="QCheckBox" name="checkBox">
+         <property name="text">
+          <string>Load From File</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLineEdit" name="lineEdit">
+         <property name="text">
+          <string>Target Master IP</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="0">
+        <widget class="QLineEdit" name="lineEdit_3"/>
+       </item>
+       <item row="0" column="5">
+        <widget class="QLabel" name="label_3">
+         <property name="text">
+          <string>Connection Method</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QLineEdit" name="lineEdit_5">
+         <property name="minimumSize">
+          <size>
+           <width>100</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>Login</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="1">
+        <widget class="QLineEdit" name="lineEdit_6"/>
+       </item>
+       <item row="4" column="1">
+        <widget class="QLineEdit" name="lineEdit_7"/>
+       </item>
+       <item row="2" column="1">
+        <widget class="QLineEdit" name="lineEdit_8"/>
+       </item>
+       <item row="1" column="3">
+        <widget class="QComboBox" name="comboBox">
+         <item>
+          <property name="text">
+           <string>Etherpad Lite</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Joomla</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Drupal 7</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>ASP .NET on Apache with Mod Mono</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Sahana Eden</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Ushahidi</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>GitLab</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>CouchDB</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>LAMP Stack</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Google AppEngine on SDK</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Google AppEngine Python SDK</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Google AppEngine Java SDK</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Elgg</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Concrete5</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>eZ publish</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>e107</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Collabtive</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>CodeIgniter</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>AppFlower</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>b2evolution</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>BambooInvoice</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>MongoDB</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Mibew</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Nginx PHP FastCGI Server Configuration</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Clipbucket</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Canvas</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>CakePHP</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>node.js</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>iceScrum</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Jenkins</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Mambo</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Mahara</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Lighttpd PHP FastCGI Configuration</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>OpenLDAP</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>osCommerce</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Omeka</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Plone</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>LimeSurvey</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>OrangeHRM</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>OpenPhoto</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Piwik</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Pligg</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>SilverStripe</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>PunBB</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>ProcessMaker</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Sencha</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>OSQA</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>ownCloud</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>phpList</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>PHP-Nuke</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Vanilla Forum</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>web2py</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Phreedom</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Typo3</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>TomatoCart</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>XOOPS</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Zurmo</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>SiT! Support Incident Tracker</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>SimpleInvoices</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>SimpleMachines</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>SugarCRM</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Zen Cart</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Yii Framework</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Ruby on Rails</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>File Server</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>WordPress</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Redmine</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>OTRS</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>MediaWiki</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>PrestaShop</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>LAPP</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Magento</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>PostgreSQL</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Django</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>LXC</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Observium</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Tendenci</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>OpenVPN</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>TKLDev</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>MySQL</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>phpBB</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Tomcat on Apache</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Standalone Tomcat</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>MindTouch Core</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Tracks</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Symfony</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>ProjectPier</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>ejabberd</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>TurnKey Core</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>TWiki</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Domain Controller</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Revision Control</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Torrent Server</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Bugzilla</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Gallery</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Moodle</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Mantis</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Movable Type</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>vTiger CRM</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>StatusNet</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>MoinMoin</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Roundup</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Trac</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>DokuWiki</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Drupal 6</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Joomla 1.5 Appliance</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item row="2" column="3">
+        <widget class="QComboBox" name="comboBox_4">
+         <item>
+          <property name="text">
+           <string>Etherpad Lite</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Joomla</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Drupal 7</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>ASP .NET on Apache with Mod Mono</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Sahana Eden</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Ushahidi</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>GitLab</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>CouchDB</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>LAMP Stack</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Google AppEngine on SDK</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Google AppEngine Python SDK</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Google AppEngine Java SDK</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Elgg</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Concrete5</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>eZ publish</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>e107</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Collabtive</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>CodeIgniter</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>AppFlower</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>b2evolution</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>BambooInvoice</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>MongoDB</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Mibew</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Nginx PHP FastCGI Server Configuration</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Clipbucket</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Canvas</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>CakePHP</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>node.js</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>iceScrum</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Jenkins</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Mambo</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Mahara</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Lighttpd PHP FastCGI Configuration</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>OpenLDAP</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>osCommerce</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Omeka</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Plone</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>LimeSurvey</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>OrangeHRM</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>OpenPhoto</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Piwik</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Pligg</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>SilverStripe</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>PunBB</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>ProcessMaker</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Sencha</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>OSQA</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>ownCloud</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>phpList</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>PHP-Nuke</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Vanilla Forum</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>web2py</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Phreedom</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Typo3</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>TomatoCart</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>XOOPS</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Zurmo</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>SiT! Support Incident Tracker</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>SimpleInvoices</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>SimpleMachines</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>SugarCRM</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Zen Cart</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Yii Framework</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Ruby on Rails</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>File Server</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>WordPress</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Redmine</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>OTRS</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>MediaWiki</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>PrestaShop</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>LAPP</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Magento</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>PostgreSQL</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Django</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>LXC</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Observium</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Tendenci</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>OpenVPN</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>TKLDev</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>MySQL</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>phpBB</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Tomcat on Apache</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Standalone Tomcat</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>MindTouch Core</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Tracks</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Symfony</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>ProjectPier</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>ejabberd</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>TurnKey Core</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>TWiki</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Domain Controller</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Revision Control</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Torrent Server</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Bugzilla</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Gallery</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Moodle</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Mantis</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Movable Type</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>vTiger CRM</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>StatusNet</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>MoinMoin</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Roundup</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Trac</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>DokuWiki</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Drupal 6</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Joomla 1.5 Appliance</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item row="3" column="3">
+        <widget class="QComboBox" name="comboBox_7">
+         <item>
+          <property name="text">
+           <string>Etherpad Lite</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Joomla</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Drupal 7</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>ASP .NET on Apache with Mod Mono</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Sahana Eden</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Ushahidi</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>GitLab</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>CouchDB</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>LAMP Stack</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Google AppEngine on SDK</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Google AppEngine Python SDK</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Google AppEngine Java SDK</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Elgg</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Concrete5</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>eZ publish</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>e107</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Collabtive</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>CodeIgniter</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>AppFlower</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>b2evolution</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>BambooInvoice</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>MongoDB</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Mibew</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Nginx PHP FastCGI Server Configuration</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Clipbucket</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Canvas</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>CakePHP</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>node.js</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>iceScrum</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Jenkins</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Mambo</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Mahara</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Lighttpd PHP FastCGI Configuration</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>OpenLDAP</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>osCommerce</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Omeka</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Plone</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>LimeSurvey</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>OrangeHRM</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>OpenPhoto</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Piwik</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Pligg</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>SilverStripe</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>PunBB</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>ProcessMaker</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Sencha</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>OSQA</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>ownCloud</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>phpList</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>PHP-Nuke</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Vanilla Forum</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>web2py</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Phreedom</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Typo3</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>TomatoCart</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>XOOPS</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Zurmo</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>SiT! Support Incident Tracker</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>SimpleInvoices</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>SimpleMachines</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>SugarCRM</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Zen Cart</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Yii Framework</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Ruby on Rails</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>File Server</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>WordPress</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Redmine</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>OTRS</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>MediaWiki</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>PrestaShop</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>LAPP</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Magento</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>PostgreSQL</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Django</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>LXC</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Observium</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Tendenci</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>OpenVPN</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>TKLDev</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>MySQL</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>phpBB</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Tomcat on Apache</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Standalone Tomcat</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>MindTouch Core</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Tracks</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Symfony</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>ProjectPier</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>ejabberd</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>TurnKey Core</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>TWiki</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Domain Controller</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Revision Control</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Torrent Server</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Bugzilla</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Gallery</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Moodle</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Mantis</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Movable Type</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>vTiger CRM</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>StatusNet</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>MoinMoin</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Roundup</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Trac</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>DokuWiki</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Drupal 6</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Joomla 1.5 Appliance</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item row="4" column="3">
+        <widget class="QComboBox" name="comboBox_10">
+         <item>
+          <property name="text">
+           <string>Etherpad Lite</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Joomla</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Drupal 7</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>ASP .NET on Apache with Mod Mono</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Sahana Eden</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Ushahidi</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>GitLab</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>CouchDB</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>LAMP Stack</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Google AppEngine on SDK</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Google AppEngine Python SDK</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Google AppEngine Java SDK</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Elgg</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Concrete5</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>eZ publish</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>e107</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Collabtive</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>CodeIgniter</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>AppFlower</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>b2evolution</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>BambooInvoice</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>MongoDB</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Mibew</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Nginx PHP FastCGI Server Configuration</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Clipbucket</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Canvas</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>CakePHP</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>node.js</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>iceScrum</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Jenkins</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Mambo</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Mahara</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Lighttpd PHP FastCGI Configuration</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>OpenLDAP</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>osCommerce</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Omeka</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Plone</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>LimeSurvey</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>OrangeHRM</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>OpenPhoto</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Piwik</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Pligg</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>SilverStripe</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>PunBB</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>ProcessMaker</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Sencha</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>OSQA</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>ownCloud</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>phpList</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>PHP-Nuke</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Vanilla Forum</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>web2py</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Phreedom</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Typo3</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>TomatoCart</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>XOOPS</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Zurmo</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>SiT! Support Incident Tracker</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>SimpleInvoices</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>SimpleMachines</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>SugarCRM</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Zen Cart</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Yii Framework</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Ruby on Rails</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>File Server</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>WordPress</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Redmine</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>OTRS</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>MediaWiki</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>PrestaShop</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>LAPP</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Magento</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>PostgreSQL</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Django</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>LXC</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Observium</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Tendenci</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>OpenVPN</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>TKLDev</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>MySQL</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>phpBB</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Tomcat on Apache</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Standalone Tomcat</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>MindTouch Core</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Tracks</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Symfony</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>ProjectPier</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>ejabberd</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>TurnKey Core</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>TWiki</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Domain Controller</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Revision Control</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Torrent Server</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Bugzilla</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Gallery</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Moodle</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Mantis</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Movable Type</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>vTiger CRM</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>StatusNet</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>MoinMoin</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Roundup</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Trac</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>DokuWiki</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Drupal 6</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Joomla 1.5 Appliance</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item row="1" column="4">
+        <widget class="QComboBox" name="comboBox_2">
+         <item>
+          <property name="text">
+           <string>VirtualBox</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>VMWare</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Xen</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item row="2" column="4">
+        <widget class="QComboBox" name="comboBox_5">
+         <item>
+          <property name="text">
+           <string>VirtualBox</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>VMWare</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Xen</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item row="3" column="4">
+        <widget class="QComboBox" name="comboBox_8">
+         <item>
+          <property name="text">
+           <string>VirtualBox</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>VMWare</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Xen</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item row="4" column="4">
+        <widget class="QComboBox" name="comboBox_11">
+         <item>
+          <property name="text">
+           <string>VirtualBox</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>VMWare</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Xen</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item row="1" column="5">
+        <widget class="QComboBox" name="comboBox_3">
+         <item>
+          <property name="text">
+           <string>SSH</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item row="2" column="5">
+        <widget class="QComboBox" name="comboBox_6">
+         <item>
+          <property name="text">
+           <string>SSH</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item row="3" column="5">
+        <widget class="QComboBox" name="comboBox_9">
+         <item>
+          <property name="text">
+           <string>SSH</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item row="4" column="5">
+        <widget class="QComboBox" name="comboBox_12">
+         <item>
+          <property name="text">
+           <string>SSH</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item row="1" column="2">
+        <widget class="QLineEdit" name="lineEdit_9">
+         <property name="minimumSize">
+          <size>
+           <width>100</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>Password</string>
+         </property>
+         <property name="echoMode">
+          <enum>QLineEdit::Password</enum>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="2">
+        <widget class="QLineEdit" name="lineEdit_10">
+         <property name="minimumSize">
+          <size>
+           <width>100</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="echoMode">
+          <enum>QLineEdit::Password</enum>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="2">
+        <widget class="QLineEdit" name="lineEdit_11">
+         <property name="minimumSize">
+          <size>
+           <width>100</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="echoMode">
+          <enum>QLineEdit::Password</enum>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="2">
+        <widget class="QLineEdit" name="lineEdit_12">
+         <property name="echoMode">
+          <enum>QLineEdit::Password</enum>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1038</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="separator"/>
+    <addaction name="actionLoad"/>
+    <addaction name="actionExit_2"/>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>Help</string>
+    </property>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuHelp"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionExit">
+   <property name="text">
+    <string>Exit</string>
+   </property>
+  </action>
+  <action name="actionLoad">
+   <property name="text">
+    <string>Load</string>
+   </property>
+  </action>
+  <action name="actionExit_2">
+   <property name="text">
+    <string>Exit</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
