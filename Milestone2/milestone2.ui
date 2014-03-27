@@ -43,6 +43,24 @@
        </item>
        <item row="6" column="0">
         <widget class="QCommandLinkButton" name="commandLinkButton_2">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>147</width>
+           <height>10</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>120</width>
+           <height>35</height>
+          </size>
+         </property>
          <property name="font">
           <font>
            <family>DejaVu Sans</family>
@@ -2428,7 +2446,7 @@
      <x>0</x>
      <y>0</y>
      <width>1038</width>
-     <height>25</height>
+     <height>21</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuFile">
@@ -2437,6 +2455,7 @@
     </property>
     <addaction name="separator"/>
     <addaction name="actionLoad"/>
+    <addaction name="actionUpdate_Apps"/>
     <addaction name="actionExit_2"/>
    </widget>
    <widget class="QMenu" name="menuHelp">
@@ -2463,7 +2482,93 @@
     <string>Exit</string>
    </property>
   </action>
+  <action name="actionUpdate_Apps">
+   <property name="text">
+    <string>Update Apps</string>
+   </property>
+  </action>
  </widget>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>actionLoad</sender>
+   <signal>activated()</signal>
+   <receiver>comboBox</receiver>
+   <slot>clearEditText()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>602</x>
+     <y>80</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionLoad</sender>
+   <signal>activated()</signal>
+   <receiver>comboBox_4</receiver>
+   <slot>clearEditText()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>602</x>
+     <y>114</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionLoad</sender>
+   <signal>activated()</signal>
+   <receiver>comboBox_7</receiver>
+   <slot>clearEditText()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>602</x>
+     <y>148</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionLoad</sender>
+   <signal>activated()</signal>
+   <receiver>comboBox_10</receiver>
+   <slot>clearEditText()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>602</x>
+     <y>182</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionExit</sender>
+   <signal>activated()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>518</x>
+     <y>142</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>

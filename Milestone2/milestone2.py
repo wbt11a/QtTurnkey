@@ -2,8 +2,8 @@
 
 # Form implementation generated from reading ui file 'milestone2.ui'
 #
-# Created: Tue Mar 25 12:16:51 2014
-#      by: PyQt4 UI code generator 4.10.3
+# Created: Thu Mar 27 17:27:11 2014
+#      by: PyQt4 UI code generator 4.10
 #
 # WARNING! All changes made in this file will be lost!
 
@@ -47,6 +47,13 @@ class Ui_MainWindow(object):
         self.label_2.setObjectName(_fromUtf8("label_2"))
         self.gridLayout.addWidget(self.label_2, 0, 4, 1, 1)
         self.commandLinkButton_2 = QtGui.QCommandLinkButton(self.frame)
+        sizePolicy = QtGui.QSizePolicy(QtGui.QSizePolicy.Minimum, QtGui.QSizePolicy.Minimum)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.commandLinkButton_2.sizePolicy().hasHeightForWidth())
+        self.commandLinkButton_2.setSizePolicy(sizePolicy)
+        self.commandLinkButton_2.setMinimumSize(QtCore.QSize(147, 10))
+        self.commandLinkButton_2.setMaximumSize(QtCore.QSize(120, 35))
         font = QtGui.QFont()
         font.setFamily(_fromUtf8("DejaVu Sans"))
         font.setPointSize(10)
@@ -590,7 +597,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout.addWidget(self.frame)
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtGui.QMenuBar(MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 1038, 25))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 1038, 21))
         self.menubar.setObjectName(_fromUtf8("menubar"))
         self.menuFile = QtGui.QMenu(self.menubar)
         self.menuFile.setObjectName(_fromUtf8("menuFile"))
@@ -606,13 +613,21 @@ class Ui_MainWindow(object):
         self.actionLoad.setObjectName(_fromUtf8("actionLoad"))
         self.actionExit_2 = QtGui.QAction(MainWindow)
         self.actionExit_2.setObjectName(_fromUtf8("actionExit_2"))
+        self.actionUpdate_Apps = QtGui.QAction(MainWindow)
+        self.actionUpdate_Apps.setObjectName(_fromUtf8("actionUpdate_Apps"))
         self.menuFile.addSeparator()
         self.menuFile.addAction(self.actionLoad)
+        self.menuFile.addAction(self.actionUpdate_Apps)
         self.menuFile.addAction(self.actionExit_2)
         self.menubar.addAction(self.menuFile.menuAction())
         self.menubar.addAction(self.menuHelp.menuAction())
 
         self.retranslateUi(MainWindow)
+        QtCore.QObject.connect(self.actionLoad, QtCore.SIGNAL(_fromUtf8("activated()")), self.comboBox.clearEditText)
+        QtCore.QObject.connect(self.actionLoad, QtCore.SIGNAL(_fromUtf8("activated()")), self.comboBox_4.clearEditText)
+        QtCore.QObject.connect(self.actionLoad, QtCore.SIGNAL(_fromUtf8("activated()")), self.comboBox_7.clearEditText)
+        QtCore.QObject.connect(self.actionLoad, QtCore.SIGNAL(_fromUtf8("activated()")), self.comboBox_10.clearEditText)
+        QtCore.QObject.connect(self.actionExit, QtCore.SIGNAL(_fromUtf8("activated()")), MainWindow.close)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
@@ -1071,6 +1086,7 @@ class Ui_MainWindow(object):
         self.actionExit.setText(_translate("MainWindow", "Exit", None))
         self.actionLoad.setText(_translate("MainWindow", "Load", None))
         self.actionExit_2.setText(_translate("MainWindow", "Exit", None))
+        self.actionUpdate_Apps.setText(_translate("MainWindow", "Update Apps", None))
 
 
 if __name__ == "__main__":
