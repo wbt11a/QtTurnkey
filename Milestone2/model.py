@@ -23,10 +23,21 @@ class Model(object):
             contents = f.readlines() 
             for element in contents:
                 if element != '\n':
-                    names.append(element.split('|')[0])
-                    temp.append(element.split('|')[1])
-        
+                    names.append(element.split(' : ')[0])
+                    temp.append(element.split(' : ')[1])
         for x in temp:
             links.append(x.strip())
         
         return names,links
+
+
+    def install(self,hostname,username,passwd,appliance):
+        hostnames=[]
+        hostnames.append(str(hostname))
+        newCon = sshconnect.SshConnect(str(username),str(passwd))
+
+        mycmd = "ls -a"
+        
+        output = newCon.connect(hostnames,mycmd)
+        for item in output:
+            print item[0], ', '.join(map(str,item[1:]))

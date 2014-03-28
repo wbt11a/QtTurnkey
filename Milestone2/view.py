@@ -209,10 +209,9 @@ class Ui_MainWindow(object):
         self.menubar.addAction(self.menuHelp.menuAction())
 
         self.retranslateUi(MainWindow)
-        QtCore.QObject.connect(self.actionLoad, QtCore.SIGNAL(_fromUtf8("activated()")), self.comboBox.clearEditText)
-        QtCore.QObject.connect(self.actionLoad, QtCore.SIGNAL(_fromUtf8("activated()")), self.comboBox_4.clearEditText)
-        QtCore.QObject.connect(self.actionLoad, QtCore.SIGNAL(_fromUtf8("activated()")), self.comboBox_7.clearEditText)
-        QtCore.QObject.connect(self.actionLoad, QtCore.SIGNAL(_fromUtf8("activated()")), self.comboBox_10.clearEditText)
+####### Slot Actions########################
+        QtCore.QObject.connect(self.commandLinkButton, QtCore.SIGNAL(_fromUtf8("clicked()")),self.install)
+        QtCore.QObject.connect(self.actionLoad, QtCore.SIGNAL(_fromUtf8("activated()")),self.update)
         QtCore.QObject.connect(self.actionExit, QtCore.SIGNAL(_fromUtf8("activated()")), self.exit)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
@@ -261,11 +260,17 @@ class Ui_MainWindow(object):
         self.comboBox_10.clear()
         self.comboBox_10.addItems(self.appliances)
 
+    def update(self):
+        print "stub"
+
     def exit(self):
         self.controller.exit()
 
     def test(self):
         print "yep"
+
+    def install(self):
+        self.controller.install(self.lineEdit.text(),self.lineEdit_5.text(),self.lineEdit_9.text(),self.comboBox.currentText())
 
     def start(object):
         MainWindow.show()
