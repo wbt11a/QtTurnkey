@@ -3,9 +3,6 @@ import urllib2
 from bs4 import BeautifulSoup
 
 top_url = "http://www.turnkeylinux.org"
-resp = urllib2.urlopen("http://www.turnkeylinux.org/all")
-firstpage = resp.read()
-list = []
 
 out_file = open("appliances.txt","w")
 
@@ -15,6 +12,8 @@ def get_links(url):
     next_url = url
     links =[]
     while next_url:
+        resp = urllib2.urlopen(next_url)
+        firstpage = resp.read()
         for link in doc.find_all('a'):
             #print link.get('class')
             classes = link.get('class')
@@ -33,8 +32,8 @@ def get_links(url):
                                 d_last = BeautifulSoup(last_page)
                                 direct_link_str = d_last.find(text="direct link")
                                 if direct_link_str:
-                                    out_file.write(link.get_text().split("-")[0] + " : " +direct_link_str.find_parent('a').get('href'))
-                     
+                                   out_file.write(link.get_text().split("-")[0] + " : " +direct_link_str.find_parent('a').get('href'))
+                                   out_file.flush()
             if "next" in link.get_text():
                 next = top_url+link.get('href')
             if next != "":
@@ -43,7 +42,7 @@ def get_links(url):
     
     
     out_file.close()
-get_links(top_url)
+get_links(top_url+"/all")
     
 
 
