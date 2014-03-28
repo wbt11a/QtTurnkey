@@ -3,10 +3,8 @@ import urllib2
 from bs4 import BeautifulSoup
 
 top_url = "http://www.turnkeylinux.org"
-
 out_file = open("appliances.txt","w")
 
-doc = BeautifulSoup(firstpage)
 def get_links(url):
     next = ""
     next_url = url
@@ -14,6 +12,7 @@ def get_links(url):
     while next_url:
         resp = urllib2.urlopen(next_url)
         firstpage = resp.read()
+        doc = BeautifulSoup(firstpage)
         for link in doc.find_all('a'):
             #print link.get('class')
             classes = link.get('class')
@@ -38,7 +37,8 @@ def get_links(url):
                 next = top_url+link.get('href')
             if next != "":
                 next_url = next
-    
+            else:
+                next_url =False
     
     
     out_file.close()
