@@ -59,12 +59,12 @@ class SshConnect():
             client.close()
             x+=1
 
-if __name__ == "__main__":
-    hosts = ['172.19.48.160']
-    user = "beaty"
-    passwd = "abc123456"
-    A = SshConnect(user,passwd)
-    getextpack = "wget http://download.virtualbox.org/virtualbox/4.2.16/Oracle_VM_VirtualBox_Extension_Pack-4.2.16.vbox-extpack"
-    installextpack = "echo " + passwd + " | sudo -S VBoxManage extpack install ./Oracle_VM_VirtualBox_Extension_Pack-4.2.16.vbox-extpack"
-    mycommand = getextpack + " && " + installextpack
-    A.connect(hosts,mycommand)
+#if __name__ == "__main__":
+#    hosts = ['172.19.48.160']
+#    user = "beaty"
+#    passwd = "abc123456"
+#    A = SshConnect(user,passwd)
+#    getextpack = "wget http://download.virtualbox.org/virtualbox/4.2.16/Oracle_VM_VirtualBox_Extension_Pack-4.2.16.vbox-extpack"
+#    installextpack = "echo " + passwd + " | sudo -S VBoxManage extpack install ./Oracle_VM_VirtualBox_Extension_Pack-4.2.16.vbox-extpack"
+#    mycommand = getextpack + " && " + installextpack
+#    A.connect(hosts,mycommand)
