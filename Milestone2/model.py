@@ -43,7 +43,6 @@ class Model(object):
             print item[0], ', '.join(map(str,item[1:]))
 
     def update_list(self):
-        print "in model."
         p = subprocess.Popen(["python", "parser.py"])
         #sys.stdout.write("Waiting")
         #while(p.poll() is not None):
