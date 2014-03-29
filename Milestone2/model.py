@@ -1,4 +1,4 @@
-import sys,os
+import sys,os,subprocess
 import sshconnect
 
 class Model(object):
@@ -41,3 +41,11 @@ class Model(object):
         output = newCon.connect(hostnames,mycmd)
         for item in output:
             print item[0], ', '.join(map(str,item[1:]))
+
+    def update_list(self):
+        print "in model."
+        p = subprocess.Popen(["python", "parser.py"])
+        #sys.stdout.write("Waiting")
+        #while(p.poll() is not None):
+        #    sys.stdout.write('.')
+        

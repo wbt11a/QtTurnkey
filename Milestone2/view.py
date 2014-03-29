@@ -210,6 +210,7 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
 ####### Slot Actions########################
+        QtCore.QObject.connect(self.actionUpdate_Apps, QtCore.SIGNAL(_fromUtf8("activated()")),self.update_list)
         QtCore.QObject.connect(self.commandLinkButton, QtCore.SIGNAL(_fromUtf8("clicked()")),self.install)
         QtCore.QObject.connect(self.actionLoad, QtCore.SIGNAL(_fromUtf8("activated()")),self.update)
         QtCore.QObject.connect(self.actionExit, QtCore.SIGNAL(_fromUtf8("activated()")), self.exit)
@@ -262,6 +263,10 @@ class Ui_MainWindow(object):
 
     def update(self):
         print "stub"
+
+    def update_list(self):
+        print "in view calling controller"
+        self.controller.update_list()
 
     def exit(self):
         self.controller.exit()

@@ -21,6 +21,9 @@ class Controller(object):
    def install(self,host,user,passwd,app):
      self.model.install(host,user,passwd,app)
 
+   def update_list(self):
+     self.model.update_list()
+
 
 
 
