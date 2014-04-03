@@ -6,6 +6,7 @@ top_url = "http://www.turnkeylinux.org"
 out_file = open("appliances.txt","w")
 
 def get_links(url):
+    hasNext = False
     next = ""
     next_url = url
     links =[]
@@ -19,6 +20,7 @@ def get_links(url):
         resp = urllib2.urlopen(next_url)
         firstpage = resp.read()
         doc = BeautifulSoup(firstpage)
+
         for link in doc.find_all('a'):
             #print link.get('class')
             classes = link.get('class')
@@ -28,7 +30,8 @@ def get_links(url):
                         try:
                             r = urllib2.urlopen(top_url+link.get('href'))
                         except urllib2.HTTPError, err1:
-                            print err1.fp.read()
+                            pass
+                            #print err1.fp.read()
                         page = r.read()
                         d = BeautifulSoup(page)
                         ovf_string = d.find(text="OVF")
@@ -38,26 +41,22 @@ def get_links(url):
                                 try:
                                     r2 = urllib2.urlopen(top_url+a_tag.get('href'))
                                 except urllib2.HTTPError, err2:
-                                    print err2.fp.read()
+                                    pass
+                                    #print err2.fp.read()
                                 last_page = r2.read()
                                 d_last = BeautifulSoup(last_page)
                                 direct_link_str = d_last.find(text="direct link")
                                 if direct_link_str:
-                                   out_file.write(link.get_text().split("-")[0] + " : " +direct_link_str.find_parent('a').get('href'))
-                                   #print link.get_text().split("-")[0] + " : " +direct_link_str.find_parent('a').get('href')
+                                   #out_file.write(link.get_text().split("-")[0] + " : " +direct_link_str.find_parent('a').get('href'))
+                                   print link.get_text().split("-")[0] + " : " +direct_link_str.find_parent('a').get('href')
                                    out_file.flush()
-            if "next" in link.get_text():
-                next = top_url+link.get('href')
-            if next != "":
-                next_url = next
-            else:
-                next_url =False
-    
-    
+
+        next = doc.find(title="Go to next page")
+        if next != None:
+            print "Next: "+ top_url + next.get('href')
+            next_url = top_url + next.get('href')
+        else:
+            next_url = False
+
     out_file.close()
 get_links(top_url+"/all")
-    
-
-
-
-
