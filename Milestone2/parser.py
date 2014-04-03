@@ -47,8 +47,8 @@ def get_links(url):
                                 d_last = BeautifulSoup(last_page)
                                 direct_link_str = d_last.find(text="direct link")
                                 if direct_link_str:
-                                   #out_file.write(link.get_text().split("-")[0] + " : " +direct_link_str.find_parent('a').get('href'))
-                                   print link.get_text().split("-")[0] + " : " +direct_link_str.find_parent('a').get('href')
+                                   out_file.write(link.get_text().split("-")[0] + " : " +direct_link_str.find_parent('a').get('href'))
+                                   #print link.get_text().split("-")[0] + " : " +direct_link_str.find_parent('a').get('href')
                                    out_file.flush()
 
         next = doc.find(title="Go to next page")
