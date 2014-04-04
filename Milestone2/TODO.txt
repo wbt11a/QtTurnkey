@@ -5,7 +5,7 @@ To Do Coding Wise for Milestone3
 -add configuration tab next to file
 -add functionality to load from file -> if clicked, QLoadWidget pops up to allow user to find the file with <ip address> : <login> : password format
 -add logic to read from file and execute on n hosts (max simultaneous specified in configuration tab)
--fix parser to where it stops repeating.  possibly add that code into its own class.
+-Make class parser its own class.
 -possibly add more try/catch blocks to prevent program crashing in various places (load file, ssh connect, download, install, etc)
 
 -Figure out some sort of formalized testing to satisfy teacher
