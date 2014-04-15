@@ -1,0 +1,9 @@
+sudo VBoxManage extpack uninstall VNC
+wget <appliance path>
+unzip <appliance name>
+sudo VBoxManage import <appliancename>*.ovf --vsys 0 --vmname "appliance-name"
+VBoxHeadless --startvm "appliance-name"
+
+----onlocal machine----
+rdesktop "ip address"
+

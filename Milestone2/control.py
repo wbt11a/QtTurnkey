@@ -18,8 +18,8 @@ class Controller(object):
      appliances,links=self.model.populate_appliances()
      return appliances,links
 
-   def install(self,host,user,passwd,app):
-     self.model.install(host,user,passwd,app)
+   def install(self,host,user,passwd,app,link,port):
+     self.model.install(host,user,passwd,app,link,port)
 
    def update_list(self):
      self.model.update_list()

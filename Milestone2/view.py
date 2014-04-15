@@ -252,6 +252,7 @@ class Ui_MainWindow(object):
          
     def populate_combos(self):
         self.appliances,self.links=self.controller.populate_appliances()
+        self.myDict = dict(zip(self.appliances,self.links))
         self.comboBox.clear()
         self.comboBox.addItems(self.appliances)
         self.comboBox_4.clear()
@@ -265,7 +266,6 @@ class Ui_MainWindow(object):
         print "stub"
 
     def update_list(self):
-        print "in view calling controller"
         self.controller.update_list()
 
     def exit(self):
@@ -275,8 +275,12 @@ class Ui_MainWindow(object):
         print "yep"
 
     def install(self):
-        self.controller.install(self.lineEdit.text(),self.lineEdit_5.text(),self.lineEdit_9.text(),self.comboBox.currentText())
+        port = 22
+        #def install(self,host,user,passwd,app,link,port)
+        #print "key translated: " + self.myDict.get(str(self.comboBox.currentText()))
+        self.controller.install(self.lineEdit.text(),self.lineEdit_5.text(),self.lineEdit_9.text(),self.comboBox.currentText(),self.myDict.get((str(self.comboBox.currentText())), 'Key not found'), port)
 
+    
     def start(object):
         MainWindow.show()
         sys.exit(app.exec_())

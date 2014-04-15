@@ -59,4 +59,5 @@ def get_links(url):
             next_url = False
 
     out_file.close()
+    print "Done"
 get_links(top_url+"/all")

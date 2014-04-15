@@ -7,8 +7,8 @@ import socket
 
 class SshConnect():
   
-    def __init__(self,user,passwd):
-        self.port = 22
+    def __init__(self,user,passwd,port):
+        self.port = port
         self.username = user
         self.password = passwd
         self.nbytes = 4096
@@ -47,23 +47,27 @@ class SshConnect():
             while True:
                 if session.recv_ready():
                     stdout_data.append(session.recv(self.nbytes))
-                    #output.append(session.recv(self.nbytes))
+                    output.append(session.recv(self.nbytes))
                 if session.recv_stderr_ready():
                     stderr_data.append(session.recv_stderr(self.nbytes))
                 if session.exit_status_ready():
                     break
 
-            #print 'exit status: ', session.recv_exit_status()
-            #print ''.join(stdout_data)
-            #print ''.join(stderr_data)
+            print 'exit status: ', session.recv_exit_status()
+            print ''.join(stdout_data)
+            print ''.join(stderr_data)
+            errors = session.recv_exit_status()
             #output.append(session.recv_exit_status())
             output.append(stdout_data)
-            #output.append(stderr_data)
+            output.append(stderr_data)
 
             session.close()
             client.close()
             x+=1
-        return output
+            if errors == 0:
+                return hostname,errors
+            else:
+                return errors
 
 #if __name__ == "__main__":
 #    hosts = ['172.19.48.160']
