@@ -1,3 +1,2 @@
 Bug Tracker (see todo for functionality improvements)
-
--parser.py continuosly looping - needs to have some sort of endpoint (possibly first repeated entry)
+-after ubuntu 14.04 update, imported appliances need version type manually set or they may hang at kernel init.
