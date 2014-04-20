@@ -1,0 +1,2 @@
+Bug Tracker (see todo for functionality improvements)
+-after ubuntu 14.04 update, imported appliances need version type manually set or they may hang at kernel init.

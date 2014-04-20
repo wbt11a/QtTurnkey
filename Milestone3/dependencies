@@ -1,0 +1,5 @@
+wget
+paramiko
+beautifulsoup
+python2
+VirtualBox extension pack if you want RDP
