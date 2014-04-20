@@ -1,4 +1,4 @@
-import sys,os,subprocess
+import sys,os,subprocess,time
 import sshconnect
 
 class Model(object):
@@ -41,25 +41,15 @@ class Model(object):
         directory = filename.replace(' ','')[:-8]
         
         
-        #mycmd1 = "echo " + str(passwd) + " | sudo -S VBoxManage extpack uninstall VNC && wget -q -T 9999 " + link + " && unzip " + filename  
-        mycmd1 = "unzip " + filename
-        mycmd2 = "VBoxManage import " + directory + "/*.ovf --vsys 0 --vmname \"" + appliance  + "\""
-        #print "sending: " + mycmd
+        mycmd1 = "echo " + str(passwd) + " | sudo -S VBoxManage extpack uninstall VNC && wget -q -T 9999 " + link + " && unzip " + filename + " && VBoxManage import " + directory + "/*.ovf --vsys 0 --vmname \"" + appliance + "\" && " + "VBoxManage modifyvm " + "\"" + appliance + "\"" + " --ostype Debian_64 &&" +  " nohup bash -c \"VBoxHeadless --startvm \"" + appliance + "\"" + " > output.log &\""
+  
         output1 = newCon.connect(hostnames,mycmd1)
-        output2 = newCon.connect(hostnames,mycmd2)
-        if output2 == 0:
-            #startvm
-            #in the future, change this to the list of successful virtual hosts
-            startvm = "nohup VBoxHeadless --startvm &" + appliance
-            ready2run = sshconnect.SshConnect(str(username),str(passwd),port)
-            output2 = read2run.connect(hostnames,startvm)
-        else:
-            print output1
-            print output2
-            print "Error in initial setup on."
-        #for item in output:
-        #    print item
-        #    print item[0], ', '.join(map(str,item[1:]))
+        #print "Waiting 5 seconds before connect initiated..."
+        print ("\n\nOutput (0 means successful): " + str(output1))
+        #time.sleep(5)
+
+        #showdsktop = subprocess.Popen(["rdesktop", hostname])
+      
 
     def update_list(self):
         p = subprocess.Popen(["python", "parser.py"])
