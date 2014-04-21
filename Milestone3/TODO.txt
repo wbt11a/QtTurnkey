@@ -3,7 +3,7 @@ To Do Coding Wise for Milestone3
 -add logic to test if the other 3 ip textbars have input and if so to launch individual threads
 -figure out how to display install progress
 -add configuration tab next to file
--add functionality to load from file -> if clicked, QLoadWidget pops up to allow user to find the file with <ip address> : <login> : password format
+
 -add logic to read from file and execute on n hosts (max simultaneous specified in configuration tab)
 -Make class parser its own class.
 -possibly add more try/catch blocks to prevent program crashing in various places (load file, ssh connect, download, install, etc)
