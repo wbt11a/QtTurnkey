@@ -1,0 +1,4 @@
+Text is Etherpad Lite
+combobox is Etherpad Lite 
+None
+http://downloads.sourceforge.net/project/turnkeylinux/ovf/turnkey-etherpad-13.0-wheezy-amd64-ovf.zip

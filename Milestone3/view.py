@@ -51,22 +51,14 @@ class Ui_MainWindow(QtGui.QMainWindow):
         self.label_2 = QtGui.QLabel(self.frame)
         self.label_2.setObjectName(_fromUtf8("label_2"))
         self.gridLayout.addWidget(self.label_2, 0, 4, 1, 1)
-        #self.commandLinkButton_2 = QtGui.QCommandLinkButton(self.frame)
         sizePolicy = QtGui.QSizePolicy(QtGui.QSizePolicy.Minimum, QtGui.QSizePolicy.Minimum)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        #sizePolicy.setHeightForWidth(self.commandLinkButton_2.sizePolicy().hasHeightForWidth())
-        #self.commandLinkButton_2.setSizePolicy(sizePolicy)
-        #self.commandLinkButton_2.setMinimumSize(QtCore.QSize(147, 10))
-        #self.commandLinkButton_2.setMaximumSize(QtCore.QSize(120, 35))
         font = QtGui.QFont()
         font.setFamily(_fromUtf8("DejaVu Sans"))
         font.setPointSize(10)
         font.setBold(True)
         font.setWeight(75)
-        #self.commandLinkButton_2.setFont(font)
-        #self.commandLinkButton_2.setObjectName(_fromUtf8("commandLinkButton_2"))
-        #self.gridLayout.addWidget(self.commandLinkButton_2, 6, 0, 1, 1)
         self.commandLinkButton = QtGui.QCommandLinkButton(self.frame)
         font = QtGui.QFont()
         font.setFamily(_fromUtf8("DejaVu Sans"))
@@ -192,12 +184,9 @@ class Ui_MainWindow(QtGui.QMainWindow):
         self.actionExit.setObjectName(_fromUtf8("actionExit"))
         self.actionAbout = QtGui.QAction(MainWindow)
         self.actionAbout.setObjectName(_fromUtf8("actionAbout"))
-        #self.actionLoad = QtGui.QAction(MainWindow)
-        #self.actionLoad.setObjectName(_fromUtf8("actionLoad"))
         self.actionUpdate_Apps = QtGui.QAction(MainWindow)
         self.actionUpdate_Apps.setObjectName(_fromUtf8("actionUpdate_Apps"))
         self.menuFile.addSeparator()
-        #self.menuFile.addAction(self.actionLoad)
         self.menuFile.addAction(self.actionUpdate_Apps)
         self.menuFile.addAction(self.actionExit)
         self.menuHelp.addAction(self.actionAbout)
@@ -207,10 +196,10 @@ class Ui_MainWindow(QtGui.QMainWindow):
         myIcon.addPixmap(QtGui.QPixmap(_fromUtf8("favicon.ico")), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         MainWindow.setWindowIcon(myIcon)
         self.retranslateUi(MainWindow)
-####### Slot Actions########################
+		
+		####### Slot Actions########################
         QtCore.QObject.connect(self.actionUpdate_Apps, QtCore.SIGNAL(_fromUtf8("activated()")),self.update_list)
         QtCore.QObject.connect(self.commandLinkButton, QtCore.SIGNAL(_fromUtf8("clicked()")),self.install)
-        #QtCore.QObject.connect(self.actionLoad, QtCore.SIGNAL(_fromUtf8("activated()")),self.update)
         QtCore.QObject.connect(self.actionExit, QtCore.SIGNAL(_fromUtf8("activated()")), self.exit)
         QtCore.QObject.connect(self.actionAbout, QtCore.SIGNAL(_fromUtf8("activated()")), self.about)
         QtCore.QObject.connect(self.checkBox, QtCore.SIGNAL(_fromUtf8("clicked()")),self.boxClicked)
@@ -220,7 +209,6 @@ class Ui_MainWindow(QtGui.QMainWindow):
         MainWindow.setWindowTitle(_translate("MainWindow", "QtTurnKey Install Assistant", None))
         self.label.setText(_translate("MainWindow", "Turnkey Application", None))
         self.label_2.setText(_translate("MainWindow", "Virtualization Type", None))
-        #self.commandLinkButton_2.setText(_translate("MainWindow", "Save", None))
         self.commandLinkButton.setText(_translate("MainWindow", "Install", None))
         self.checkBox.setText(_translate("MainWindow", "Load From File", None))
         self.lineEdit.setText(_translate("MainWindow", "Target Master IP", None))
@@ -247,9 +235,13 @@ class Ui_MainWindow(QtGui.QMainWindow):
         self.menuHelp.setTitle(_translate("MainWindow", "Help", None))
         self.actionExit.setText(_translate("MainWindow", "Exit", None))
         self.actionAbout.setText(_translate("MainWindow", "About", None))
-        #self.actionLoad.setText(_translate("MainWindow", "Load", None))
         self.actionUpdate_Apps.setText(_translate("MainWindow", "Update Apps", None))
         self.populate_combos()
+
+    def error_frame(self, display_message):
+    	quit_msg = str(display_message)
+        QtGui.QMessageBox.warning(self, 'Message', quit_msg)
+
          
     def populate_combos(self):
         self.appliances,self.links=self.controller.populate_appliances()
@@ -283,9 +275,38 @@ class Ui_MainWindow(QtGui.QMainWindow):
 
     def install(self):
         port = 22
-        #def install(self,host,user,passwd,app,link,port)
-        #print "key translated: " + self.myDict.get(str(self.comboBox.currentText()))
-        self.controller.install(self.lineEdit.text(),self.lineEdit_5.text(),self.lineEdit_9.text(),self.comboBox.currentText(),self.myDict.get((str(self.comboBox.currentText())), 'Key not found'), port)
+
+       
+        if(self.lineEdit.text() != "Target Master IP"):
+        	if(self.lineEdit_5.text() != "Login"):
+        		if(self.lineEdit_9.text()!="Password"):
+        			self.controller.install(self.lineEdit.text(),self.lineEdit_5.text(),self.lineEdit_9.text(),self.comboBox.currentText(),self.myDict.get((str(self.comboBox.currentText())), 'Key not found'), port)
+        		else:
+        			self.error_frame("Error:  Please enter a password.")
+        	else:
+        		self.error_frame("Error:  Please enter a login.")
+        else:
+        	self.error_frame("Error:  Please enter a host.")
+        
+        if(self.lineEdit_2.text() !=""):
+        	self.controller.install(self.lineEdit_2.text(),self.lineEdit_8.text(),self.lineEdit_10.text(),self.comboBox_4.currentText(),self.myDict.get((str(self.comboBox_4.currentText())), 'Key not found'), port)
+        	print "sent " + self.lineEdit_2.text()
+        if(self.lineEdit_3.text() !=""):
+        	self.controller.install(self.lineEdit_3.text(),self.lineEdit_6.text(),self.lineEdit_11.text(),self.comboBox_7.currentText(),self.myDict.get((str(self.comboBox_7.currentText())), 'Key not found'), port)
+        if(self.lineEdit_4.text() !=""):
+        	self.controller.install(self.lineEdit_4.text(),self.lineEdit_7.text(),self.lineEdit_12.text(),self.comboBox_10.currentText(),self.myDict.get((str(self.comboBox_10.currentText())), 'Key not found'), port)
+   
+    	if(self.fname!=None):
+    		myFile = open(str(self.fname),'r')
+    		for line in myFile:
+    			app = line.split(":")[3]
+    			app = app + " "
+    			self.controller.install(line.split(":")[0], line.split(":")[1], line.split(":")[2], line.split(":")[3], self.myDict.get((app),'Key not found'), port)
+    			#[0]==host
+    			#[1]==login
+    			#[2]==password
+    			#[3]==application
+    			#fourth argument is the dictionary lookup of the url
 
     def boxClicked(self):
     	if self.checkBox.isChecked():

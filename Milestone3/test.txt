@@ -1,0 +1,2 @@
+127.0.0.1:beaty:850isSSTdr3w:Etherpad Lite:VirtualBox
+localhost:beaty:850isSSTdr3w:GitLab:VirtualBox

@@ -15,10 +15,11 @@ class SshConnect():
 
     
     def test(self,hostname):
-        x=0
+    
+        '''x=0
         while x < len(hostname):
-            s = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
-            try:
+            try:   
+                s = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
                 s.connect((hostname[x],self.port))
                 print hostname[x] + " is up"
                 x+=1
@@ -27,13 +28,59 @@ class SshConnect():
                 print hostname[x] + " is getting removed."
                 hostname.remove(hostname[x])
                 x+=1
-        s.close()
+            s.close()
+        return hostname'''
+        try:   
+            s = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
+            s.connect((hostname,self.port))
+            print hostname + " is up"
+            
+        except socket.error as e:
+            print "Error on connect: %s" % e
+            print hostname + " is getting removed."
+            s.close()
+            hostname=None
         return hostname
+        
 
     def connect(self,hostname,command):
         output=[]
+        hostname = str(hostname)
         hostname = self.test(hostname)
-        x = 0
+        if hostname != None:
+            print "Issuing command to " + hostname + "\n"
+            client = paramiko.Transport((hostname, self.port))
+            client.connect(username=self.username, password=self.password)
+            stdout_data = []
+            stderr_data = []
+            session = client.open_channel(kind='session')
+            session.exec_command(command)
+                
+            while True:
+                if session.recv_ready():
+                    stdout_data.append(session.recv(self.nbytes))
+                    output.append(session.recv(self.nbytes))
+                if session.recv_stderr_ready():
+                    stderr_data.append(session.recv_stderr(self.nbytes))
+                if session.exit_status_ready():
+                    break
+
+            print 'exit status: ', session.recv_exit_status()
+            print ''.join(stdout_data)
+            print ''.join(stderr_data)
+            errors = session.recv_exit_status()
+            #output.append(session.recv_exit_status())
+            output.append(stdout_data)
+            output.append(stderr_data)
+
+            session.close()
+            client.close()
+        
+        if errors == 0:
+            return hostname,errors
+        else:
+            return errors
+        '''x = 0
         while x < len(hostname):
             print "Issuing command to " + hostname[x] + "\n"
             client = paramiko.Transport((hostname[x], self.port))
@@ -68,6 +115,7 @@ class SshConnect():
                 return hostname,errors
             else:
                 return errors
+                '''
 
 #if __name__ == "__main__":
 #    hosts = ['172.19.48.160']
