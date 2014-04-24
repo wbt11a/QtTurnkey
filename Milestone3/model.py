@@ -1,5 +1,5 @@
 import sys,os,subprocess,time, threading
-import sshconnect
+import sshconnect, parser
 
 class Model(object):
 
@@ -51,6 +51,9 @@ class Model(object):
 
 
     def update_list(self):
-       p = subprocess.Popen(["python", "parser.py"])
-      
+        A = parser.Parser("http://www.turnkeylinux.org", "appliances.txt")
+        retval = A.get_links("http://www.turnkeylinux.org/all")
+        return retval
+
+   
         

@@ -259,13 +259,15 @@ class Ui_MainWindow(QtGui.QMainWindow):
         print "stub"
 
     def update_list(self):
-        self.controller.update_list()
+    	self.error_frame("Updating.  This may take some time and UI will be unresponsive.")
+        retval = self.controller.update_list()
+        if int(retval) == 5:
+        	self.error_frame("Update Complete.")
+        else:
+        	self.error_frame("There was an error in updating.")
 
     def exit(self):
         self.controller.exit()
-
-    def test(self):
-        print "yep"
 
     def about(self):
     	AboutWindow = QtGui.QDialog()

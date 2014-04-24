@@ -22,10 +22,8 @@ class Controller(object):
      self.model.install(host,user,passwd,app,link,port)
 
    def update_list(self):
-     self.model.update_list()
-
-
-
+     retval = self.model.update_list()
+     return retval
 
 if __name__ == "__main__" :
    controller = Controller()

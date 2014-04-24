@@ -7,6 +7,7 @@ Sahana Eden  : http://downloads.sourceforge.net/project/turnkeylinux/ovf/turnkey
 Ushahidi  : http://downloads.sourceforge.net/project/turnkeylinux/ovf/turnkey-ushahidi-13.0-wheezy-amd64-ovf.zip
 GitLab  : http://downloads.sourceforge.net/project/turnkeylinux/ovf/turnkey-gitlab-13.0-wheezy-amd64-ovf.zip
 CouchDB  : http://downloads.sourceforge.net/project/turnkeylinux/ovf/turnkey-couchdb-13.0-wheezy-amd64-ovf.zip
+LAMP Stack  : http://downloads.sourceforge.net/project/turnkeylinux/ovf/turnkey-lamp-13.0-wheezy-amd64-ovf.zip
 Google AppEngine Go SDK  : http://downloads.sourceforge.net/project/turnkeylinux/ovf/turnkey-appengine-go-13.0-wheezy-amd64-ovf.zip
 Google AppEngine Python SDK  : http://downloads.sourceforge.net/project/turnkeylinux/ovf/turnkey-appengine-python-13.0-wheezy-amd64-ovf.zip
 Google AppEngine Java SDK  : http://downloads.sourceforge.net/project/turnkeylinux/ovf/turnkey-appengine-java-13.0-wheezy-amd64-ovf.zip
@@ -73,6 +74,7 @@ Magento  : http://downloads.sourceforge.net/project/turnkeylinux/ovf/turnkey-mag
 PostgreSQL  : http://downloads.sourceforge.net/project/turnkeylinux/ovf/turnkey-postgresql-13.0-wheezy-amd64-ovf.zip
 Django  : http://downloads.sourceforge.net/project/turnkeylinux/ovf/turnkey-django-13.0-wheezy-amd64-ovf.zip
 LXC  : http://downloads.sourceforge.net/project/turnkeylinux/ovf/turnkey-lxc-13.0-wheezy-amd64-ovf.zip
+Observium  : http://downloads.sourceforge.net/project/turnkeylinux/ovf/turnkey-observium-13.0-wheezy-amd64-ovf.zip
 Tendenci  : http://downloads.sourceforge.net/project/turnkeylinux/ovf/turnkey-tendenci-13.0-wheezy-amd64-ovf.zip
 OpenVPN  : http://downloads.sourceforge.net/project/turnkeylinux/ovf/turnkey-openvpn-13.0-wheezy-amd64-ovf.zip
 TKLDev  : http://downloads.sourceforge.net/project/turnkeylinux/ovf/turnkey-tkldev-13.0-wheezy-amd64-ovf.zip
@@ -84,6 +86,7 @@ Tracks  : http://downloads.sourceforge.net/project/turnkeylinux/ovf/turnkey-trac
 Symfony  : http://downloads.sourceforge.net/project/turnkeylinux/ovf/turnkey-symfony-13.0-wheezy-amd64-ovf.zip
 ProjectPier  : http://downloads.sourceforge.net/project/turnkeylinux/ovf/turnkey-projectpier-13.0-wheezy-amd64-ovf.zip
 ejabberd  : http://downloads.sourceforge.net/project/turnkeylinux/ovf/turnkey-ejabberd-13.0-wheezy-amd64-ovf.zip
+TurnKey Core  : http://downloads.sourceforge.net/project/turnkeylinux/ovf/turnkey-core-13.0-wheezy-amd64-ovf.zip
 TWiki  : http://downloads.sourceforge.net/project/turnkeylinux/ovf/turnkey-twiki-13.0-wheezy-amd64-ovf.zip
 Domain Controller  : http://downloads.sourceforge.net/project/turnkeylinux/ovf/turnkey-domain-controller-13.0-wheezy-amd64-ovf.zip
 Revision Control  : http://downloads.sourceforge.net/project/turnkeylinux/ovf/turnkey-revision-control-13.0-wheezy-amd64-ovf.zip
@@ -98,4 +101,5 @@ StatusNet  : http://downloads.sourceforge.net/project/turnkeylinux/ovf/turnkey-s
 Roundup  : http://downloads.sourceforge.net/project/turnkeylinux/ovf/turnkey-roundup-13.0-wheezy-amd64-ovf.zip
 MoinMoin  : http://downloads.sourceforge.net/project/turnkeylinux/ovf/turnkey-moinmoin-13.0-wheezy-amd64-ovf.zip
 DokuWiki  : http://downloads.sourceforge.net/project/turnkeylinux/ovf/turnkey-dokuwiki-13.0-wheezy-amd64-ovf.zip
+Trac  : http://downloads.sourceforge.net/project/turnkeylinux/ovf/turnkey-trac-13.0-wheezy-amd64-ovf.zip
 Drupal 6  : http://downloads.sourceforge.net/project/turnkeylinux/ovf/turnkey-drupal6-12.1-squeeze-amd64-ovf.zip

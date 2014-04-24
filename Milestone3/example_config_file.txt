@@ -1,0 +1,6 @@
+host_ip:login_name:login_pass:application_name:VirtualBox
+
+clemson.edu:beaty:myPaSS123:Etherpad Lite:VirtualBox
+
+
+*note:  special characters need a \ in front of them due to translating errors.
