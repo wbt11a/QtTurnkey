@@ -1,5 +1,5 @@
 from PyQt4 import QtCore, QtGui
-import sys
+import sys, About
 
 
 app = QtGui.QApplication(sys.argv)
@@ -190,6 +190,8 @@ class Ui_MainWindow(QtGui.QMainWindow):
         MainWindow.setStatusBar(self.statusbar)
         self.actionExit = QtGui.QAction(MainWindow)
         self.actionExit.setObjectName(_fromUtf8("actionExit"))
+        self.actionAbout = QtGui.QAction(MainWindow)
+        self.actionAbout.setObjectName(_fromUtf8("actionAbout"))
         #self.actionLoad = QtGui.QAction(MainWindow)
         #self.actionLoad.setObjectName(_fromUtf8("actionLoad"))
         self.actionUpdate_Apps = QtGui.QAction(MainWindow)
@@ -198,6 +200,7 @@ class Ui_MainWindow(QtGui.QMainWindow):
         #self.menuFile.addAction(self.actionLoad)
         self.menuFile.addAction(self.actionUpdate_Apps)
         self.menuFile.addAction(self.actionExit)
+        self.menuHelp.addAction(self.actionAbout)
         self.menubar.addAction(self.menuFile.menuAction())
         self.menubar.addAction(self.menuHelp.menuAction())
         myIcon = QtGui.QIcon()
@@ -209,6 +212,7 @@ class Ui_MainWindow(QtGui.QMainWindow):
         QtCore.QObject.connect(self.commandLinkButton, QtCore.SIGNAL(_fromUtf8("clicked()")),self.install)
         #QtCore.QObject.connect(self.actionLoad, QtCore.SIGNAL(_fromUtf8("activated()")),self.update)
         QtCore.QObject.connect(self.actionExit, QtCore.SIGNAL(_fromUtf8("activated()")), self.exit)
+        QtCore.QObject.connect(self.actionAbout, QtCore.SIGNAL(_fromUtf8("activated()")), self.about)
         QtCore.QObject.connect(self.checkBox, QtCore.SIGNAL(_fromUtf8("clicked()")),self.boxClicked)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
@@ -242,6 +246,7 @@ class Ui_MainWindow(QtGui.QMainWindow):
         self.menuFile.setTitle(_translate("MainWindow", "File", None))
         self.menuHelp.setTitle(_translate("MainWindow", "Help", None))
         self.actionExit.setText(_translate("MainWindow", "Exit", None))
+        self.actionAbout.setText(_translate("MainWindow", "About", None))
         #self.actionLoad.setText(_translate("MainWindow", "Load", None))
         self.actionUpdate_Apps.setText(_translate("MainWindow", "Update Apps", None))
         self.populate_combos()
@@ -269,6 +274,12 @@ class Ui_MainWindow(QtGui.QMainWindow):
 
     def test(self):
         print "yep"
+
+    def about(self):
+    	AboutWindow = QtGui.QDialog()
+        myAbout = About.Ui_Dialog(self)
+        myAbout.setupUi(AboutWindow)
+        AboutWindow.exec_()
 
     def install(self):
         port = 22
