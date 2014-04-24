@@ -200,7 +200,9 @@ class Ui_MainWindow(QtGui.QMainWindow):
         self.menuFile.addAction(self.actionExit)
         self.menubar.addAction(self.menuFile.menuAction())
         self.menubar.addAction(self.menuHelp.menuAction())
-
+        myIcon = QtGui.QIcon()
+        myIcon.addPixmap(QtGui.QPixmap(_fromUtf8("favicon.ico")), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        MainWindow.setWindowIcon(myIcon)
         self.retranslateUi(MainWindow)
 ####### Slot Actions########################
         QtCore.QObject.connect(self.actionUpdate_Apps, QtCore.SIGNAL(_fromUtf8("activated()")),self.update_list)
